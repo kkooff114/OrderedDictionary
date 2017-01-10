@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OrderedDictionary.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init];
+    
+    dictionary[@"c"] = @"cc";
+    dictionary[@"a"] = @"aa";
+    dictionary[@"b"] = @"bb";
+    dictionary[@"d"] = @"dd";
+    dictionary[@"e"] = @"ee";
+    
+    NSLog(@"%@", dictionary.description);
+    
+    OrderedDictionary *ordered = [[OrderedDictionary alloc]initWithDictionary:dictionary];
+    
+    NSString * jsonString = [ordered toJSONString];
+    
+    NSLog(@"%@", jsonString);
+    
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 

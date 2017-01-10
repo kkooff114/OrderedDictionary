@@ -15,6 +15,7 @@
 		7230FC201E252A0A00C32FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7230FC1E1E252A0A00C32FEF /* LaunchScreen.storyboard */; };
 		7230FC2B1E252A0A00C32FEF /* OrderedDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7230FC2A1E252A0A00C32FEF /* OrderedDictionaryTests.m */; };
 		7230FC361E252A0A00C32FEF /* OrderedDictionaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7230FC351E252A0A00C32FEF /* OrderedDictionaryUITests.m */; };
+		7230FC451E252AFE00C32FEF /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7230FC441E252AFE00C32FEF /* OrderedDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7230FC311E252A0A00C32FEF /* OrderedDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderedDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7230FC351E252A0A00C32FEF /* OrderedDictionaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionaryUITests.m; sourceTree = "<group>"; };
 		7230FC371E252A0A00C32FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7230FC431E252AFE00C32FEF /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
+		7230FC441E252AFE00C32FEF /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		7230FC0F1E252A0A00C32FEF /* OrderedDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				7230FC431E252AFE00C32FEF /* OrderedDictionary.h */,
+				7230FC441E252AFE00C32FEF /* OrderedDictionary.m */,
 				7230FC131E252A0A00C32FEF /* AppDelegate.h */,
 				7230FC141E252A0A00C32FEF /* AppDelegate.m */,
 				7230FC161E252A0A00C32FEF /* ViewController.h */,
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7230FC181E252A0A00C32FEF /* ViewController.m in Sources */,
+				7230FC451E252AFE00C32FEF /* OrderedDictionary.m in Sources */,
 				7230FC151E252A0A00C32FEF /* AppDelegate.m in Sources */,
 				7230FC121E252A0A00C32FEF /* main.m in Sources */,
 			);
