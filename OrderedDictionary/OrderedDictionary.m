@@ -55,8 +55,24 @@
 
         } else if ([value isKindOfClass:[NSArray class]]) {
             // 如果是array
-            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:value options:0 error:nil];
-            NSString *arrayString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            NSMutableString *arrayString = [[NSMutableString alloc] init];
+            if ([value count] > 0 && [value[0] isKindOfClass:[NSDictionary class]]) {
+
+                [arrayString appendString:@"["];
+                for (int j = 0; j < [value count]; j++) {
+                    // 如果是dictionary, 先转成OrderedDictionary
+                    OrderedDictionary *orderedDictionary = [[OrderedDictionary alloc] initWithDictionary:value[j]];
+                    [arrayString appendFormat:@"%@", [orderedDictionary toJSONString]];
+
+                    if (j < [value count] - 1) {
+                        [arrayString appendString:@","];
+                    }
+                }
+                [arrayString appendString:@"]"];
+            } else {
+                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:value options:0 error:nil];
+                arrayString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            }
             [jsonString appendFormat:@"\"%@\":%@", _sortedArray[i], arrayString];
 
         } else if ([value isKindOfClass:[OrderedDictionary class]]) {
